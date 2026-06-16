@@ -1,0 +1,36 @@
+controller:
+  publish_rate: 20.0
+
+gains:
+  kv: 1.5
+  kw: 4.0
+
+trajectory:
+  type: "circle"
+
+circle:
+  xc: 5.5
+  yc: 5.5
+  radius: 3.0
+  omega: 0.2
+
+ellipse:
+  xc: 5.5
+  yc: 5.5
+  a: 4.0
+  b: 2.0
+  omega: 0.2
+
+figure8:
+  xc: 5.5
+  yc: 5.5
+  ax: 3.0
+  ay: 3.0
+  omega: 0.3
+
+spiral:
+  xc: 5.5
+  yc: 5.5
+  growth_rate: 0.1
+  max_radius: 4.0
+  omega: 0.4
