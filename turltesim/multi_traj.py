@@ -25,7 +25,7 @@ class TrajectoryTracker(Node):
 
         self.pose = None
 
-        config_file = "config/trajectory_config.yaml"
+        config_file = "config.yaml"
 
         with open(config_file, "r") as f:
             self.cfg = yaml.safe_load(f)
