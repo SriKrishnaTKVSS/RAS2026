@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import math
+import os
 import yaml
 
 import rclpy
@@ -25,7 +26,9 @@ class TrajectoryTracker(Node):
 
         self.pose = None
 
-        config_file = "config.yaml"
+        config_file = os.path.join(
+            os.path.dirname(__file__), "config.yaml"
+        )
 
         with open(config_file, "r") as f:
             self.cfg = yaml.safe_load(f)
