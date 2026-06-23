@@ -1,0 +1,14 @@
+# Bridge configuration for Nao in Gazebo Sim
+#
+# The Fuel Nao model uses per-joint cmd_pos topics for control.
+# Joint commands go through trajectory_bridge.py which converts
+# ROS JointTrajectory -> per-joint gz.msgs.Double publications.
+#
+# NOTE: This model has NO camera/IMU/laser/odometry topics.
+
+# Clock
+- ros_topic_name: "clock"
+  gz_topic_name: "/clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  gz_type_name: "gz.msgs.Clock"
+  direction: GZ_TO_ROS
